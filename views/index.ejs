@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Films</title>
+</head>
+<body>
+  <h1>Primeras 10 películas</h1>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Título</th>
+        <th>Descripción</th>
+        <th>Fecha de lanzamiento</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% films.forEach(film => { %>
+        <tr>
+          <td><%= film.film_id %></td>
+          <td><%= film.title %></td>
+          <td><%= film.description %></td>
+          <td><%= film.release_year %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</body>
+</html>
